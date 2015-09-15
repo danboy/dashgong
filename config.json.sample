@@ -1,0 +1,17 @@
+{
+  "button": {
+    "id": "da:sh:bu:tt:on:id"
+  },
+  "slack": {
+    "token": "slackTKN-1234567891011-slacktoken",
+    "webhook": "https://hooks.slack.com/services/SERVIXEXXX/IDOFSLACKHOOKXXXYYYYZZZZ",
+    "channel": "#general",
+    "username": "Dash-button",
+    "message": "From amazon dash."
+  },
+  "giphy": {
+    "url": "http://api.giphy.com/v1/gifs/search",
+    "key": "GIPHYKEYXXX",
+    "searchTerms": ["amazon", "dash","button","node"]
+  }
+}
