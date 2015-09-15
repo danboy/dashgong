@@ -3,7 +3,6 @@
     "id": "da:sh:bu:tt:on:id"
   },
   "slack": {
-    "token": "slackTKN-1234567891011-slacktoken",
     "webhook": "https://hooks.slack.com/services/SERVIXEXXX/IDOFSLACKHOOKXXXYYYYZZZZ",
     "channel": "#general",
     "username": "Dash-button",
