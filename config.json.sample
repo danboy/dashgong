@@ -1,16 +1,20 @@
 {
-  "button": {
-    "id": "da:sh:bu:tt:on:id"
-  },
-  "slack": {
-    "webhook": "https://hooks.slack.com/services/SERVIXEXXX/IDOFSLACKHOOKXXXYYYYZZZZ",
-    "channel": "#general",
-    "username": "Dash-button",
-    "message": "From amazon dash."
-  },
-  "giphy": {
-    "url": "http://api.giphy.com/v1/gifs/search",
-    "key": "GIPHYKEYXXX",
-    "searchTerms": ["amazon", "dash","button","node"]
-  }
+  "buttons": [
+    {
+      "name": "myName",
+      "id": "da:sh:bu:tt:on:id"
+      "action": "gong",
+      "slack": {
+        "webhook": "https://hooks.slack.com/services/SERVIXEXXX/IDOFSLACKHOOKXXXYYYYZZZZ",
+        "channel": "#general",
+        "username": "Dash-button",
+        "message": "From amazon dash."
+      },
+      "giphy": {
+        "url": "http://api.giphy.com/v1/gifs/search",
+        "key": "GIPHYKEYXXX",
+        "searchTerms": ["amazon", "dash","button","node"]
+      }
+    }
+  ]
 }
