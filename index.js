@@ -2,31 +2,52 @@
 
 var config = require('./config'),
     dash_button = require('node-dash-button'),
-    dash = dash_button(config.button.id);
     request = require('request');
 
-dash.on("detected", function (){
-  getGif(getRandom(config.giphy.searchTerms), function(err, gif){
-    var message = {
-        channel: config.slack.channel,
-        text: config.slack.message+"\n"+gif+"\n",
-        icon_emoji: ':clap:',
-        username: config.slack.user
-      };
-    sendToSlack(message);
-    console.log("gong");
+
+config.buttons.forEach(function(button){
+  var dash = dash_button(button.id);
+  dash.on("detected", function (){
+    doAction[button.action](button);
   });
 });
 
-var sendToSlack = function(message){
-  var url = config.slack.webhook;
+var doAction = {
+  gong: function(button){
+    var slack = button.slack;
+    var giphy = button.giphy;
+    getGif(giphy, function(err, gif){
+      var message = {
+          channel: slack.channel,
+          text: slack.message+"\n"+gif+"\n",
+          icon_emoji: ':clap:',
+          username: slack.user
+        };
+      sendToSlack(message, slack.webhook);
+      console.log("gong");
+    });
+  },
+  post: function(options){
+    request.post(options, function(err, res){
+      console.log(err, res);
+    });  
+  },
+  get: function(url){
+    request.get(url, function(er, response){
+      console.log(er, response);
+    });
+  }
+}
+
+var sendToSlack = function(message, url){
   request.post({url: url, json: message}, function(err, result){
     console.log('sent', message);
   });
 };
 
-var getGif = function(query, cb){
-  var url = config.giphy.url+"?q="+query+"&api_key="+config.giphy.key;
+var getGif = function(giphy, cb){
+  var query = getRandom(giphy.searchTerms)
+  var url = giphy.url+"?q="+query+"&api_key="+giphy.key;
   request.get(url, function(er, response){
     if(er) return cb(er);
     try{
