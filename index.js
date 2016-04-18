@@ -2,6 +2,7 @@
 
 var config = require('./config'),
     dash_button = require('node-dash-button'),
+    logger = require('./lib/loggingService'),
     request = require('request');
 
 config.buttons.forEach(function(button){
@@ -23,6 +24,7 @@ var doAction = {
           username: slack.user
         };
       sendToSlack(message, slack.webhook);
+      logger.log({type: button.name, details: button});
       console.log("gong");
     });
   },
