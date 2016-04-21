@@ -24,12 +24,11 @@ var doAction = {
           username: slack.user
         };
       if(button.timeout){
-        setTimout( function(){sendToSlack(message)}, button.timer );
+        setTimeout( function(){sendToSlack(message, slack.webhook)}, button.timeout );
       }else{
         sendToSlack(message, slack.webhook);
       }
       logger.log({type: button.name, details: button});
-      console.log("gong");
     });
   },
   post: function(options){
