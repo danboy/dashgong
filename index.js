@@ -23,7 +23,7 @@ var doAction = {
           icon_emoji: ':clap:',
           username: slack.user
         };
-      if(button.timer){
+      if(button.timeout){
         setTimout( function(){sendToSlack(message)}, button.timer );
       }else{
         sendToSlack(message, slack.webhook);
