@@ -1,4 +1,13 @@
 {
+  "settings": {
+    "logging": {
+      "url":            "http://dot.com",
+      "token":          "look-a-me-im-a-token",
+      "client-id":      "CLIENTID",
+      "client-secret":  "CLIENTSECRET"
+      "enabled": true
+    }
+  },
   "buttons": [
     {
       "name": "myName",
