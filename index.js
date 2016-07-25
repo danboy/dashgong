@@ -28,7 +28,8 @@ var doAction = {
       }else{
         sendToSlack(message, slack.webhook);
       }
-      logger.log({type: button.name, details: button});
+      if(config.logging.enabled)
+        logger.log({type: button.name, details: button});
     });
   },
   post: function(options){
