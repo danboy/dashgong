@@ -27,3 +27,58 @@ $ sudo dashgong
 ```
 
 press your dash button and watch your slack channel.
+
+
+## Route types.
+Dashgong supports a couple different route types via the action setting.
+
+### Slack
+
+```
+{
+  "name": "myName",
+    "id": "da:sh:bu:tt:on:id",
+    "action": "gong",
+    "slack": {
+      "webhook": "https://hooks.slack.com/services/SERVIXEXXX/IDOFSLACKHOOKXXXYYYYZZZZ",
+      "channel": "#general",
+      "username": "Dash-button",
+      "message": "From amazon dash."
+    },
+    "giphy": {
+      "url": "http://api.giphy.com/v1/gifs/search",
+      "key": "GIPHYKEYXXX",
+      "searchTerms": ["amazon", "dash","button","node"]
+    }
+}
+```
+
+
+
+### Posting
+
+Dashgong uses [request](https://github.com/request/request) to post. All post options are past in config via the post section.
+
+```
+{
+  "name": "Post to a url",
+    "id": "da:sh:bu:tt:on:id",
+    "action": "post",
+    "post": {
+      "url": "http://site.com/to/post/to",
+      "auth": {
+        "user": "username",
+        "pass": "password",
+        "sendImmediately": false
+      },
+      "headers": {
+        "User-Agent": "request"
+      }
+    },
+    "giphy": {
+      "url": "http://api.giphy.com/v1/gifs/search",
+      "key": "dc6zaTOxFJmzC",
+      "searchTerms": ["hazzah", "celebrate","yay","gong","hell yeah"]
+    }
+}
+```
