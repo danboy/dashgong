@@ -24,6 +24,22 @@
         "key": "GIPHYKEYXXX",
         "searchTerms": ["amazon", "dash","button","node"]
       }
+    },
+    {
+      "name": "Post to a url",
+      "id": "da:sh:bu:tt:on:id",
+      "action": "post",
+      "post": {
+        "url": "http://site.com/to/post/to",
+        "auth": {
+          "user": "username",
+          "pass": "password",
+          "sendImmediately": false
+        },
+        "headers": {
+          "User-Agent": "request"
+        }
+      }
     }
   ]
 }

@@ -74,11 +74,6 @@ Dashgong uses [request](https://github.com/request/request) to post. All post op
       "headers": {
         "User-Agent": "request"
       }
-    },
-    "giphy": {
-      "url": "http://api.giphy.com/v1/gifs/search",
-      "key": "dc6zaTOxFJmzC",
-      "searchTerms": ["hazzah", "celebrate","yay","gong","hell yeah"]
     }
 }
 ```
