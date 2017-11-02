@@ -4,14 +4,14 @@
       "url":            "http://dot.com",
       "token":          "look-a-me-im-a-token",
       "client-id":      "CLIENTID",
-      "client-secret":  "CLIENTSECRET"
+      "client-secret":  "CLIENTSECRET",
       "enabled": true
     }
   },
   "buttons": [
     {
       "name": "myName",
-      "id": "da:sh:bu:tt:on:id"
+      "id": "da:sh:bu:tt:on:id",
       "action": "gong",
       "slack": {
         "webhook": "https://hooks.slack.com/services/SERVIXEXXX/IDOFSLACKHOOKXXXYYYYZZZZ",
