@@ -7,7 +7,7 @@ var config = require('./config'),
     request = require('request');
 
 config.buttons.forEach(function(button){
-  var dash = dash_button(button.id);
+  var dash = dash_button(button.id, null, null, 'all');
   dash.on("detected", function (){
     if(!presses[button.id]){
       doAction[button.action](button);
