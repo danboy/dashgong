@@ -77,3 +77,17 @@ Dashgong uses [request](https://github.com/request/request) to post. All post op
     }
 }
 ```
+
+
+### Sending a text
+
+Dashgong uses [twilio](https://twilio.com) to text, sign up for a aaccount and get your API token and ID
+
+```
+{
+  "name": "Send a text",
+    "id": "da:sh:bu:tt:on:id",
+    "action": "text",
+    "messages": ["hey, i was sent from a dash button."]
+}
+```

@@ -6,7 +6,8 @@
   "dependencies": {
     "node-dash-button": "^0.6.1",
     "request": "^2.67.0",
-    "slack-client": "^1.5.1"
+    "slack-client": "^1.5.1",
+    "twilio": "^3.11.3"
   },
   "devDependencies": {},
   "scripts": {

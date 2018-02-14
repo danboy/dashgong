@@ -1,5 +1,11 @@
 {
   "settings": {
+    "twilio": {
+      "id": "YOUR_ID_HERE",
+      "token": "YOUR_TOKEN_HERE",
+      "from": "+15555555555",
+      "to": "+15555555556"
+    },
     "logging": {
       "url":            "http://dot.com",
       "token":          "look-a-me-im-a-token",
@@ -40,6 +46,12 @@
           "User-Agent": "request"
         }
       }
+    },
+    {
+      "name": "Send a text",
+      "id": "da:sh:bu:tt:on:id",
+      "action": "text",
+      "messages": ["Ding Dong.", "Hey, someone is at your door", "( ͡° ͜ʖ ͡°)", "o/ o_ o/ o_", "(☞ﾟヮﾟ)☞"]
     }
   ]
 }
